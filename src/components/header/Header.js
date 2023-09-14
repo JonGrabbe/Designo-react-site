@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import logo from "../../assets/shared/desktop/logo-dark.png"
 import hamburgerMenuIcon from "../../assets/shared/mobile/icon-hamburger.svg";
 
@@ -10,14 +11,23 @@ function MenuItem(props) {
 }
 
 export default function Header(props) {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    let menuClassName = isMenuOpen ? ' menu-open' : ' menu-closed';
+
+    function menuClick() {
+        setIsMenuOpen(!isMenuOpen)
+    }
+
     return (
         <>
             <header className="header spacer">
                 <img src={logo} className="logo" alt="" />
-                <img src={hamburgerMenuIcon} alt="" />
+                <button onClick={menuClick}>
+                    <img src={hamburgerMenuIcon} alt="" />
+                </button>
             </header>
 
-            <div className="menu-dropdown-container">
+            <div className={"menu-dropdown-container"+menuClassName}>
                 <nav className="spacer menu-items-container nav-ul-menu">
                     <ul>
                         <MenuItem text="Our company" href="/about" />
