@@ -1,0 +1,6 @@
+// Extra large devices
+@mixin tablet {
+    @media (min-width: 936px) {
+        @content;
+    }
+ }

@@ -1,3 +1,5 @@
+@import '../breakpoints/breakpoints.scss';
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -41,4 +43,11 @@
             margin-bottom: 0;
         }
     }
+}
+
+#menu-dropdown-container {
+    @include tablet {
+        display: none;
+    }
+
 }

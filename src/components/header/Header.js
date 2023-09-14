@@ -27,7 +27,7 @@ export default function Header(props) {
                 </button>
             </header>
 
-            <div className={"menu-dropdown-container"+menuClassName}>
+            <div className={"menu-dropdown-container"+menuClassName} id='menu-dropdown-container'>
                 <nav className="spacer menu-items-container nav-ul-menu">
                     <ul>
                         <MenuItem text="Our company" href="/about" />
