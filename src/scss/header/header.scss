@@ -14,7 +14,31 @@
         position: relative;
         top: 3px;
     }
-    
+    .menu-button {
+        @include tablet {
+            display: none;
+        }
+    }
+    .header-nav-menu-container {
+        display: none;
+        @include tablet {
+            display: initial;
+        }
+        ul {
+            display: flex;
+        }
+        .menu-item {
+            display: block;
+            font-size: 14px;
+            letter-spacing: 2px;
+            line-height: 14px;
+            margin-right: 42px;
+            text-transform: uppercase;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 
