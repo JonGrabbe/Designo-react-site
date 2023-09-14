@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // padding: 35px 0;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    .logo {
+        width: 202px;
+        position: relative;
+        top: 3px;
+    }
+    .menu-open {
+        display: initial;
+    }
+    .menu-closed {
+        display: none;
+    }
+
+}
+
+
+// dropdown menu
+.menu-items-container {
+    background-color: $black;
+    font-size: 24px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    .menu-item {
+        color: $white;
+        line-height: 25px;
+        letter-spacing: 2px;
+        font-style: normal;
+        margin-bottom: 37px;
+        text-transform: uppercase;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
