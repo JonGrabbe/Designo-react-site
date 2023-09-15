@@ -9,10 +9,9 @@ ul {
 }
 a {
     text-decoration: none;
-    // &:visited {
-    //     color: inherit;
-    // }
-    color: initial;
+    &:visited {
+        color: inherit;
+    }
 }
 button {
     padding: 0;

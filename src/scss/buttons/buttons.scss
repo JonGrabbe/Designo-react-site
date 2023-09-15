@@ -1,16 +1,22 @@
 .button {
+    $height: 56px;
+    $line-height: $global-line-height;
+    $color: $black;
     display: block;
     box-sizing: border-box;
-    padding-top: 10px;
+    padding-top: calc(($height - $line-height) / 2);
     border-radius: 8px;
     width: 152px;
-    height: 56px;
+    height: $height;
     background-color: $white;
-    color: $black;
+    color: $color;
     font-size: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
+    &:visited {
+        color: $color;
+    }
 }
 .button--on-dark {
     @extend .button;
