@@ -1,0 +1,16 @@
+.banner {
+    background-color: $peach;
+    color: $white;
+    .banner-heading {
+        font-size: 32px;
+        font-weight: normal;
+        text-align: center;
+        line-height: 36px;
+        letter-spacing: 0;
+    }
+    .banner-text {
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+    }
+}
