@@ -1,4 +1,5 @@
 import ButtonOnDark from "../buttons/ButtonOnDark";
+import PhoneImg from "../../assets/home/desktop/image-hero-phone.png";
 
 export default function HomeBanner(props) {
     return (
@@ -14,7 +15,7 @@ export default function HomeBanner(props) {
                 <ButtonOnDark text="learn more" />
             </div>
             <div className="bottom-container">
-
+                <img src={PhoneImg} alt="" className="botton-container-img" />
             </div>
         </div>
     )
