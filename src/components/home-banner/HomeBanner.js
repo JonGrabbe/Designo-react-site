@@ -1,3 +1,5 @@
+import ButtonOnDark from "../buttons/ButtonOnDark";
+
 export default function HomeBanner(props) {
     return (
         <div className="home-banner-container banner spacer">
@@ -9,6 +11,7 @@ export default function HomeBanner(props) {
                     With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, 
                     and engaging brand experiences. Find out more about our services.
                 </p>
+                <ButtonOnDark text="learn more" />
             </div>
             <div className="bottom-container">
 
