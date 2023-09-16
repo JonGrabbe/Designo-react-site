@@ -4,3 +4,9 @@
         @content;
     }
  }
+ // home banner using this
+ @mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+ }

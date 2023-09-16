@@ -4,15 +4,42 @@
             @content;
         }
      }
+    @mixin desktop {
+        @media (min-width: 1024px) {
+            @content;
+        }
+     }
      @include tablet() {
         // display: flex;
-        justify-content: center;
+        // justify-content: center;
      }
      .top-container {
         @include tablet() {
             margin: auto;
             max-width: 460px;
         }
+        @include desktop() {
+            max-width: 467px;
+            margin: initial;
+        }
+        .h2,.p {
+            @include desktop() {
+                text-align: left;
+            }    
+        }
+        .p {
+            @include desktop() {
+                max-width: initial;
+            }
+        }
+        .button {
+            @include desktop() {
+                max-width: initial;
+                margin-left: initial;
+                margin-right: initial;
+            }
+        }
+
      }
      // circle background image
     background-repeat: no-repeat;
@@ -25,15 +52,15 @@
         background-position-x: 100%;
      }
     .h2 {
-        padding-top: 79px;
+        padding-top: 151px;
     }
     .p {
-        margin-top: 31px;
+        margin-top: 46px;
         max-width: 420px;
     }
     .button {
         margin: auto;
-        margin-top: 28px;
+        margin-top: 46px;
     }
     
     .bottom-container {
