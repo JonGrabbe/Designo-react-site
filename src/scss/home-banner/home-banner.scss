@@ -42,6 +42,8 @@
         background-position: center;
         background-position-y: -65px;
         background-size: 650px;
-
+        @include tablet() {
+            background-size: 770px;
+        }
     }
 }
