@@ -9,9 +9,9 @@
             @content;
         }
      }
-     @include tablet() {
-        // display: flex;
-        // justify-content: center;
+     @include desktop() {
+        display: flex;
+        justify-content: space-between;
      }
      .top-container {
         @include tablet() {
@@ -71,6 +71,10 @@
         background-size: 650px;
         @include tablet() {
             background-size: 770px;
+        }
+        @include desktop() {
+            width: 700px;
+            height: 700px;
         }
     }
 }
