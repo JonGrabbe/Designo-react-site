@@ -1,4 +1,15 @@
 .home-banner-container {
+    background-repeat: no-repeat;
+    // background-position: center;
+    // background-position-x: 100px;
+    // background-position-y: 10px;
+    // background-size: 640px 750px;
+    // opacity: 5;
+    background-position: center;
+    background-position-x: 0px;
+    background-position-y: 98px;
+    background-size: 640px 750px;
+    opacity: 5;
     .h2 {
         padding-top: 79px;
     }
@@ -16,5 +27,14 @@
         background-position: center;
         background-position-y: -65px;
         background-size: 650px;
+
     }
 }
+// .home-banner-container {
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-position-x: 0px;
+//     background-position-y: 98px;
+//     background-size: 640px 750px;
+//     opacity: 5;
+// }
