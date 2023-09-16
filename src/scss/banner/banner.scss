@@ -1,4 +1,12 @@
 .banner {
+    @mixin tablet {
+        @media (min-width: 618px) {
+            @content;
+        }
+     }
+     @include tablet {
+        // max-width: 573px;
+     }
     background-color: $peach;
     color: $white;
     .banner-heading {
@@ -7,10 +15,21 @@
         text-align: center;
         line-height: 36px;
         letter-spacing: 0;
+        @include tablet {
+            font-size: 48px;
+            line-height: 48px;
+            letter-spacing: 0;
+        }
     }
     .banner-text {
         font-size: 15px;
         line-height: 25px;
         text-align: center;
+        @include tablet {
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0;
+            text-align: center;
+        }
     }
 }

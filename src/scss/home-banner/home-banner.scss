@@ -1,4 +1,19 @@
 .home-banner-container {
+    @mixin tablet {
+        @media (min-width: 618px) {
+            @content;
+        }
+     }
+     @include tablet() {
+        // display: flex;
+        justify-content: center;
+     }
+     .top-container {
+        @include tablet() {
+            margin: auto;
+            max-width: 460px;
+        }
+     }
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: 0px;
@@ -10,6 +25,7 @@
     }
     .p {
         margin-top: 31px;
+        max-width: 420px;
     }
     .button {
         margin: auto;
