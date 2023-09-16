@@ -14,7 +14,7 @@ export default function HomeBanner(props) {
                 </p>
                 <ButtonOnDark text="learn more" />
             </div>
-            <div className="bottom-container">
+            <div className="bottom-container" style={{backgroundImage: `url(${process.env.PUBLIC_URL+'/image-hero-phone.png'})`}}>
                 
             </div>
         </div>
