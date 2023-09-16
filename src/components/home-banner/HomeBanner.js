@@ -15,7 +15,7 @@ export default function HomeBanner(props) {
                 <ButtonOnDark text="learn more" />
             </div>
             <div className="bottom-container">
-                <img src={PhoneImg} alt="" className="botton-container-img" />
+                
             </div>
         </div>
     )
