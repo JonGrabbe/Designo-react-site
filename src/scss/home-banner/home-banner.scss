@@ -14,12 +14,16 @@
             max-width: 460px;
         }
      }
+     // circle background image
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: 0px;
     background-position-y: 98px;
     background-size: 640px 750px;
-    opacity: 5;
+    // opacity: 5;
+     @include tablet() {
+        background-position-x: 100%;
+     }
     .h2 {
         padding-top: 79px;
     }
