@@ -1,6 +1,6 @@
 .home-banner-container {
     @mixin tablet {
-        @media (min-width: 618px) {
+        @media (min-width: 900px) {
             @content;
         }
      }

@@ -1,6 +1,11 @@
 @import '../breakpoints/breakpoints.scss';
 
 .header {
+    @mixin tablet {
+        @media (min-width: 770px) {
+            @content;
+        }
+    }
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,7 +15,7 @@
     // margin-right: 0;
     padding-top: 35px;
     padding-bottom: 35px;
-    @include tablet-global {
+    @include tablet {
         padding-top: 64px;
         padding-bottom: 64px;
     }
@@ -45,9 +50,8 @@
             }
         }
     }
+
 }
-
-
 // dropdown menu
 .menu-dropdown-container {
     &.menu-open {
@@ -79,8 +83,14 @@
 }
 
 #menu-dropdown-container {
+    @mixin tablet {
+        @media (min-width: 770px) {
+            @content;
+        }
+    }
     @include tablet {
         display: none;
     }
 
 }
+
