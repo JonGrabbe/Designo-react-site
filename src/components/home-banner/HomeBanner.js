@@ -3,7 +3,7 @@ import PhoneImg from "../../assets/home/desktop/image-hero-phone.png";
 
 export default function HomeBanner(props) {
     return (
-        <div className="home-banner-container banner" style={{backgroundImage: `url(${process.env.PUBLIC_URL+'/bg-pattern-small-circle.svg'})`}} >
+        <div className="home-banner-container banner spacer" style={{backgroundImage: `url(${process.env.PUBLIC_URL+'/bg-pattern-small-circle.svg'})`}} >
             <div className="top-container spacer">
                 <h2 className="banner-heading h2">
                     Award-winning custom designs and digital branding solutions

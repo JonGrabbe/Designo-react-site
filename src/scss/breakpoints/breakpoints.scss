@@ -4,6 +4,11 @@
         @content;
     }
  }
+@mixin tablet-global {
+    @media (min-width: 700px) {
+        @content;
+    }
+ }
  // home banner using this
  @mixin desktop {
     @media (min-width: 1128px) {

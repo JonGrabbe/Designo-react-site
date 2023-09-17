@@ -40,7 +40,9 @@
             }
         }
 
-     }
+    }
+    margin-left: 0;
+    margin-right: 0;
      // circle background image
     background-repeat: no-repeat;
     background-position: center;
@@ -50,9 +52,11 @@
     // opacity: 5;
      @include tablet() {
         background-position-x: 100%;
+        margin-left: 41px;
+        margin-right: 41px;
      }
     .h2 {
-        padding-top: 151px;
+        padding-top: 87px;
     }
     .p {
         margin-top: 46px;
