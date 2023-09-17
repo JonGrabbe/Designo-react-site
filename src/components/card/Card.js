@@ -2,7 +2,7 @@ import rightArrow from '../../assets/shared/desktop/icon-right-arrow.svg';
 
 export default function Card(props) {
     return (
-        <div className="card-container">
+        <div className="card-container" style={{backgroundImage: `url(${process.env.PUBLIC_URL+'/'+props.imgPath})`}}>
             <div className="content-inner-wrapper">
                 <h3 className="h3 heading">
                     {props.text}

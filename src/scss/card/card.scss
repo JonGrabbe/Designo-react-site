@@ -1,9 +1,32 @@
  .card-container {
-    width: 227px;
-    height: 250;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 327px;
+    height: 250px;
     border-radius: 15px;
     margin-top: 27px;
     // fallback im img dosent work
     background-color: $black;
-    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $white;
+    .heading {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 1.4px;
+    }
+    .link-container {
+        text-align: center;
+        .text {
+            font-size: 15px;
+            letter-spacing: 5px;
+        }
+        .arrow-img {
+            margin-left: 22px;
+        }
+    }
  }
