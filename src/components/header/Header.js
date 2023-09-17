@@ -22,7 +22,7 @@ export default function Header(props) {
 
     return (
         <>
-            <header className="header spacer">
+            <header className="header spacer-margin">
                 <img src={logo} className="logo" alt="" />
                 <button onClick={menuClick} className='menu-button'>
                     <img src={isMenuOpen ? closeMenuIcon : hamburgerMenuIcon} alt="" />

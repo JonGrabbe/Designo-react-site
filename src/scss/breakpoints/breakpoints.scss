@@ -3,7 +3,7 @@
     @media (min-width: 936px) {
         @content;
     }
- }
+}
 @mixin tablet-global {
     @media (min-width: 700px) {
         @content;
@@ -11,6 +11,11 @@
  }
  // home banner using this
  @mixin desktop {
+    @media (min-width: 1128px) {
+        @content;
+    }
+ }
+ @mixin desktop-global {
     @media (min-width: 1128px) {
         @content;
     }

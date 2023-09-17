@@ -5,14 +5,11 @@
         }
      }
     @mixin desktop {
-        @media (min-width: 1024px) {
+        @media (min-width: 1430px) {
             @content;
         }
      }
-     @include desktop() {
-        display: flex;
-        justify-content: space-between;
-     }
+     
      .top-container {
         @include tablet() {
             margin: auto;
@@ -50,10 +47,17 @@
     background-position-y: 98px;
     background-size: 640px 750px;
     // opacity: 5;
-     @include tablet() {
-        background-position-x: 100%;
+    @include tablet() {
         margin-left: 41px;
         margin-right: 41px;
+        border-radius: 12px;
+        background-position-x: 100%;
+    }
+    @include desktop() {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 160px;
+        margin-left: 160px;
      }
     .h2 {
         padding-top: 87px;
