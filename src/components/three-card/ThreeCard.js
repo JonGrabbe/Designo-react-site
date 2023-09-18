@@ -1,7 +1,4 @@
 import Card from "../card/Card";
-import webDesignImgMobile from '../../assets/home/mobile/image-web-design.jpg';
-import appDesignImgMobile from '../../assets/home/mobile/image-app-design.jpg';
-import graphicDesignImgMobile from '../../assets/home/mobile/image-graphic-design.jpg';
 
 const images = {
     webDesign: {
@@ -21,10 +18,6 @@ const images = {
     }
     
 }
-
-const webDesign = 'assets/home/mobile/image-web-design.jpg'
-const appDesign = 'assets/home/mobile/image-app-design.jpg';
-const graphicDesign = 'assets/home/mobile/image-graphic-design.jpg';
 
 export default function ThreeCard(props) {
     return (
