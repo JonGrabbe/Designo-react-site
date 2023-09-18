@@ -1,3 +1,9 @@
 .borderless-cards-container {
+    @mixin tablet {
+        @media (min-width: 748px) {
+            @content;
+        }
+    }
     margin-top: 120px;
+    
 }

@@ -1,14 +1,36 @@
 .borderless-card {
+    @mixin tablet {
+        @media (min-width: 748px) {
+            @content;
+        }
+    }
     // height: 400px;
     // width: 400px;
     margin: auto;
     margin-top: 87px;
     max-width: 428px;
+    @include tablet {
+        max-width: initial;
+        display: grid;
+        grid-template-columns: 202px auto;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "img ."
+            "img .";
+        column-gap: 49px;
+    }
     .borderless-card-background-img {
         margin: auto;
+        @include tablet {
+            grid-area: img;
+            // margin-right: 49px;
+        }
     }
     .heading, .text {
         text-align: center;
+        @include tablet {
+            text-align: left;
+        }
     }
     .heading {
         margin-top: 51px;
@@ -16,6 +38,11 @@
         font-weight: 500;
         line-height: 26px;
         letter-spacing: 5px;
+        @include tablet() {
+            margin-top: 0;
+            align-self: flex-end;
+            margin-bottom: 30px;
+        }
     }
     .text {
         margin-top: 41px;
@@ -23,5 +50,8 @@
         font-size: 16px;
         letter-spacing: 0;
         line-height: 26px;
+        @include tablet() {
+            margin-top: 0;
+        }
     }
 }
