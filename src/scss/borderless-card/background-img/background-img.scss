@@ -1,0 +1,15 @@
+.borderless-card-background-img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    .main {
+        position: absolute;
+        width: 100%;
+        z-index: 999;
+    }
+    .circle {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+}
