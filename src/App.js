@@ -9,7 +9,7 @@ function App() {
     <div className="App global-font">
       <Header />
       <HomeBanner />
-      <ThreeCard />
+      {/* <ThreeCard /> */}
       <BorderlessCardsContainer />
     </div>
   );

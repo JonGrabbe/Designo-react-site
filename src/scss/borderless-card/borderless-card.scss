@@ -1,4 +1,27 @@
 .borderless-card {
-    height: 400px;
-    width: 400px;
+    // height: 400px;
+    // width: 400px;
+    margin: auto;
+    margin-top: 87px;
+    max-width: 428px;
+    .borderless-card-background-img {
+        margin: auto;
+    }
+    .heading, .text {
+        text-align: center;
+    }
+    .heading {
+        margin-top: 51px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 5px;
+    }
+    .text {
+        margin-top: 41px;
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 26px;
+    }
 }
