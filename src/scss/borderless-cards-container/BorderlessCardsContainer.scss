@@ -1,9 +1,16 @@
 .borderless-cards-container {
+    @mixin desktop {
+        @media (min-width: 1433px) {
+            @content;
+        }
+    }
     @mixin tablet {
         @media (min-width: 748px) {
             @content;
         }
     }
     margin-top: 120px;
-    
+    @include desktop() {
+        display: flex;
+    }
 }

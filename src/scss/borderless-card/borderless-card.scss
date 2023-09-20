@@ -1,4 +1,9 @@
 .borderless-card {
+    @mixin desktop {
+        @media (min-width: 1433px) {
+            @content;
+        }
+    }
     @mixin tablet {
         @media (min-width: 748px) {
             @content;
@@ -9,6 +14,7 @@
     margin: auto;
     margin-top: 87px;
     max-width: 428px;
+ 
     @include tablet {
         max-width: initial;
         display: grid;
@@ -18,6 +24,10 @@
             "img ."
             "img .";
         column-gap: 49px;
+    }
+    @include desktop() {
+        display: initial;
+        max-width: 350px;
     }
     .borderless-card-background-img {
         margin: auto;
@@ -31,6 +41,9 @@
         @include tablet {
             text-align: left;
         }
+        @include desktop() {
+            text-align: center;
+        }
     }
     .heading {
         margin-top: 51px;
@@ -43,6 +56,10 @@
             align-self: flex-end;
             margin-bottom: 30px;
         }
+        @include desktop() {
+            margin-top: 51px;
+            margin-right: initial;
+        }
     }
     .text {
         margin-top: 41px;
@@ -50,8 +67,16 @@
         font-size: 16px;
         letter-spacing: 0;
         line-height: 26px;
+        max-width: 480px;
         @include tablet() {
             margin-top: 0;
+            position: relative;
+            top: -15px;
+        }
+        @include desktop() {
+            margin-top: 41px;
+            position: initial;
+            top: initial;
         }
     }
 }
