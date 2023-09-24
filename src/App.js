@@ -3,6 +3,7 @@ import Header from './components/header/Header';
 import HomeBanner from './components/home-banner/HomeBanner';
 import ThreeCard from './components/three-card/ThreeCard';
 import BorderlessCardsContainer from './components/borderless-cards-container/BorderlessCardsContainer';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <HomeBanner />
       {/* <ThreeCard /> */}
       <BorderlessCardsContainer />
+      <Footer />
     </div>
   );
 }
