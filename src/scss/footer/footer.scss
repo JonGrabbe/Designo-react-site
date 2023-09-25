@@ -1,7 +1,13 @@
 .footer {
     $tablet-width: 790px;
+    $desktop-width: 1440px;
     @mixin tablet() {
         @media (min-width: $tablet-width) {
+            @content;
+        }
+    }
+    @mixin desktop() {
+        @media (min-width: $desktop-width) {
             @content;
         }
     }
@@ -18,7 +24,7 @@
     @include tablet {
         display: grid;
         grid-template-rows: auto auto auto;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 258px 200px auto;
         grid-template-areas:
             "logo links-container links-container"
             "hr hr hr"
@@ -26,6 +32,9 @@
         padding-top: 165px;
         padding-left: 38px;
         padding-right: 38px;
+    }
+    @include desktop {
+        grid-template-columns: 414px 200px auto;
     }
     .footer-spacer {
         margin-left: 24px;
