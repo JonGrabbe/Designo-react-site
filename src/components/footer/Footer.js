@@ -15,13 +15,13 @@ export default function Footer(props) {
                 <a href="" className="link">Locations</a>
                 <a href="" className="link">Contact</a>
             </div>
-            <div className="item info-container">
+            <div className="item info-container info-container-1">
                 <h2 className="h2 heading item">Designo Central Office</h2>
                 <p className="text-item item">3886 Wellington Street</p>
                 <p className="text-item item">Toronto, Ontario M9C 3J5</p>
                 
             </div>
-            <div className="item info-container">
+            <div className="item info-container info-container-2">
                 <h2 className="h2 heading item">
                     Contact Us (Central Office)
                 </h2>

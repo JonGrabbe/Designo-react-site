@@ -1,4 +1,11 @@
 .footer {
+    $tablet-width: 790px;
+    @mixin tablet() {
+        @media (min-width: $tablet-width) {
+            @content;
+        }
+    }
+    // $tablet_width: 768px;
     display: flex;
     flex-direction: column;
     // justify-content: center;
@@ -8,6 +15,18 @@
     align-items: center;
     background-color: $black;
     color: $white;
+    @include tablet {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+            "logo links-container links-container"
+            "hr hr hr"
+            "info-container-1 info-container-2 social-media-container";
+        padding-top: 165px;
+        padding-left: 38px;
+        padding-right: 38px;
+    }
     .footer-spacer {
         margin-left: 24px;
         margin-right: 24px;
@@ -15,6 +34,11 @@
     .logo {
         margin-top: 252px;
         width: 202px;
+        grid-area: logo;
+        @include tablet {
+            margin-top: initial;
+            margin-right: 100px;
+        }
     }
     .hr {
         width: 100%;
@@ -22,8 +46,24 @@
         margin-bottom: 35px;
         // opacity: 53.35%;
         opacity: 10%;
+        grid-area: hr;
+        @include tablet {
+            // margin-top: 0;
+            // margin-bottom: 0;
+        }
+    }
+    .info-container-1 {
+        grid-area: info-container-1;
+    }
+    .info-container-2 {
+        grid-area: info-container-2;
     }
     .links-container {
+        @include tablet {
+            grid-area: links-container;
+            display: flex;
+            justify-content: flex-end;
+        }
         .link {
             display: block;
             margin-bottom: 33px;
@@ -35,13 +75,27 @@
             font-size: 14px;
             line-height: 14px;
             letter-spacing: 2px;
+            @include tablet {
+                margin-right: 40px;
+                margin-bottom: 0;
+                letter-spacing: 2px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
         }
     }
     .info-container {
+        margin-top: 35px;
+        @include tablet {
+            margin-top: 0;
+        }
         .item {
             text-align: center;
+            @include tablet {
+                text-align: left;
+            }
         }
-        margin-top: 35px;
         .heading {
             font-weight: bold;
             font-size: 16px;
@@ -57,11 +111,23 @@
         }
     }
     .social-media-icons-container {
+        @include tablet {
+            grid-area: social-media-container;
+        }
         margin-top: 44px;
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+        }
         .icon-img {
             margin-right: 14px;
             &:last-child {
                 margin-right: 0;
+            }
+            @include tablet {
+                &:first-child {
+                    margin-left: auto;
+                }
             }
         }
     }
