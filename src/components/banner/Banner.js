@@ -6,8 +6,9 @@ export default function Banner(props) {
     let circleWidth = 292;
     let styles = {
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/shared/desktop/bg-pattern-small-circle.svg), url(${process.env.PUBLIC_URL}/assets/shared/desktop/bg-pattern-small-circle.svg), url(${process.env.PUBLIC_URL}/assets/shared/desktop/bg-pattern-small-circle.svg)`,
-        backgroundPosition: "150% -50%, 150% 50%",
-        backgroundRepeat: "no-repeat"
+        backgroundPosition: `65px -80px, 65px 207px`,
+        backgroundSize: "292px auto, 292px auto",
+        backgroundRepeat: "no-repeat",
     }
     return (
         <div className="footer-banner-container banner spacer-margin" style={styles}>
