@@ -6,7 +6,7 @@ export default function Banner(props) {
     let circleWidth = 292;
     let styles = {
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/shared/desktop/bg-pattern-small-circle.svg), url(${process.env.PUBLIC_URL}/assets/shared/desktop/bg-pattern-small-circle.svg), url(${process.env.PUBLIC_URL}/assets/shared/desktop/bg-pattern-small-circle.svg)`,
-        backgroundPosition: `65px -80px, 65px 207px`,
+        backgroundPosition: `100px -80px, 100px 208px`,
         backgroundSize: "292px auto, 292px auto",
         backgroundRepeat: "no-repeat",
     }

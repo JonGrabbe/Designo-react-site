@@ -12,6 +12,9 @@
     padding-left: 24px;
     background-color: $peach;
     border-radius: 20px;
+    @include desktop {
+        margin-top: -37px;
+    }
     .h2 {
         padding-left: 20px;
         padding-right: 20px;

@@ -29,12 +29,14 @@
             "logo links-container links-container"
             "hr hr hr"
             "info-container-1 info-container-2 social-media-container";
-        padding-top: 165px;
+        padding-top: 281px;
         padding-left: 38px;
         padding-right: 38px;
     }
     @include desktop {
         grid-template-columns: 414px 200px auto;
+        padding-left: 164px;
+        padding-right: 164px;
     }
     .footer-spacer {
         margin-left: 24px;
