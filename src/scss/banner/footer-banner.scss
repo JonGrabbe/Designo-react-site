@@ -20,9 +20,10 @@
     @include tablet {
         // background: none;
         // background-image: 'url(/assets/shared/desktop/bg-pattern-small-circle-flipped-1801.svg), url(/assets/shared/desktop/bg-pattern-small-circle-flipped-1801.svg), url(/assets/shared/desktop/bg-pattern-small-circle-flipped-1801.svg), url(/assets/shared/desktop/bg-pattern-small-circle-flipped-1801.svg), url(/assets/shared/desktop/bg-pattern-small-circle-flipped-1801.svg)';
-        background-image: url('./assets/shared/desktop/bg-pattern-small-circle-flipped-180.svg');
+        background-image: url('/assets/shared/desktop/bg-pattern-small-circle-flipped-180.svg');
         background-size: 202px auto;
-        background-position: 400px 100px;
+        // background-position: 400px 100px;
+        background-position: left bottom;
     }
     @include desktop {
         margin-top: -37px;
