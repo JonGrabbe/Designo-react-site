@@ -4,11 +4,12 @@
             @content;
         }
      }
+     background-color: $peach;
+     color: $white;
      @include tablet {
         // max-width: 573px;
+        // background-repeat: repeat-x;
      }
-    background-color: $peach;
-    color: $white;
     .banner-heading {
         font-size: 32px;
         font-weight: normal;
