@@ -11,7 +11,7 @@ export default function Banner(props) {
         backgroundRepeat: "no-repeat",
     }
     return (
-        <div className="footer-banner-container banner spacer-margin" style={styles}>
+        <div className="footer-banner-container banner spacer-margin" >
             <h2 className="banner-heading h2">Let’s talk about your project</h2>
             <p className="banner-text p">
                 Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.

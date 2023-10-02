@@ -4,6 +4,11 @@
             @content;
         }
      }
+     @mixin desktop-2 {
+        @media (min-width: 940px) {
+            @content;
+        }
+     }
     display: flex;
     flex-direction: column;
     // justify-content: center;
@@ -17,16 +22,46 @@
     padding-left: 24px;
     background-color: $peach;
     border-radius: 20px;
+    // background image
+    $right_offset: -15%;
+    background-image: 
+            url('/assets/shared/desktop/bg-pattern-small-circle.svg'),
+            url('/assets/shared/desktop/bg-pattern-small-circle.svg'),
+            url('/assets/shared/desktop/bg-pattern-small-circle.svg');
+    background-position: 
+       right $right_offset top -30px,
+       right $right_offset bottom -70px,
+       left -150px bottom -70px;
+    background-repeat: no-repeat;
+    background-size: 250px;
     @include tablet {
         // background: none;
         // background-image: 'url(/assets/shared/desktop/bg-pattern-small-circle-flipped-1801.svg), url(/assets/shared/desktop/bg-pattern-small-circle-flipped-1801.svg), url(/assets/shared/desktop/bg-pattern-small-circle-flipped-1801.svg), url(/assets/shared/desktop/bg-pattern-small-circle-flipped-1801.svg), url(/assets/shared/desktop/bg-pattern-small-circle-flipped-1801.svg)';
-        background-image: url('/assets/shared/desktop/bg-pattern-small-circle-flipped-180.svg');
-        background-size: 202px auto;
+        background-image: 
+            url('/assets/shared/desktop/bg-pattern-small-circle.svg'),
+            url('/assets/shared/desktop/bg-pattern-small-circle.svg'),
+            url('/assets/shared/desktop/bg-pattern-small-circle.svg'),
+            url('/assets/shared/desktop/bg-pattern-small-circle.svg'),
+            url('/assets/shared/desktop/bg-pattern-small-circle.svg');
+        background-size: 202px;
         // background-position: 400px 100px;
-        background-position: left bottom;
+        background-position: 
+            right 100px top, 
+            right -18% top, 
+            right 400px top 200px, 
+            right 100px top 200px, 
+            right -18% top 200px;
     }
     @include desktop {
         margin-top: -37px;
+    }
+    @include desktop-2 {
+        background-position: 
+            right 200px top, 
+            right top, 
+            right 200px top 200px, 
+            right top 200px, 
+            right 400px top 200px;
     }
     .h2 {
         padding-left: 20px;
