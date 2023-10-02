@@ -75,6 +75,9 @@
             font-style: normal;
             margin-bottom: 37px;
             text-transform: uppercase;
+            a {
+                color: inherit;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
