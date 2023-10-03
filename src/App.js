@@ -8,17 +8,10 @@ import Footer from './components/footer/Footer';
 import Banner from './components/banner/Banner';
 import GraphicDesignPage from './routes/graphic-design/GraphicDesignPage';
 
-function TestContent() {
-  return (
-    <h1>this works</h1>
-  )
-}
-
 function Home() {
   return (
     <div>
       <HomeBanner />
-
       <ThreeCard />
       <BorderlessCardsContainer />
     </div>
@@ -32,8 +25,7 @@ function App() {
             <Header />
               <Routes>
                 <Route exact path="/" element={<Home />} />
-                <Route exact path="/" element={<Home />} />
-                <Route exact path="/graphic-design" element={GraphicDesignPage} />
+                <Route exact path="/graphic-design" element={<GraphicDesignPage />} />
               </Routes>
             <Banner />
             <Footer />
