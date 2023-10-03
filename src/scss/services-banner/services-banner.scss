@@ -1,6 +1,57 @@
 .services-banner {
+    @mixin tablet {
+        @media (min-width: 689px) {
+            @content;
+        }
+    }
+    @mixin desktop {
+        @media (min-width: 1111px) {
+            @content;
+        }
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 318px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    // padding-top: 105px;
+    // padding-bottom: 105px;
+    overflow: hidden;
     background-image: url('/assets/web-design/desktop/bg-pattern-intro-web.svg');
     background-repeat: no-repeat;
     background-position: right top 20px;
+    text-align: center;
+    @include tablet {
+        height: 252px;
+        background-image: url('/assets/app-design/desktop/bg-pattern-intro-app.svg');
+        background-position: center;
+
+    }
+    @include desktop {
+        background-position: center left;
+    }
+    .heading {
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 0px;
+        font-weight: 500;
+        @include tablet {
+            font-size: 48px;
+            line-height: 48px;
+            letter-spacing: 0px;
+        }
+    }
+    .text {
+        margin-top: 42px;
+        font-size: 15px;
+        font-weight: 00;
+        line-height: 25px;
+        letter-spacing: 0px;
+        max-width: 396px;
+        @include tablet {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
 }
