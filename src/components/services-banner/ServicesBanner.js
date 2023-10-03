@@ -4,7 +4,7 @@ export default function ServicesBanner(props) {
             <div className="content">
                 <h1 className="heading h1">Graphic Design</h1>
                 <p className="text p">
-                    We deliver eye-catching branding materials that are tailored to meet your business objectives.
+                    {props.text}
                 </p>
             </div>
         </div>

@@ -18,6 +18,13 @@ function Home() {
   )
 }
 
+let textContent = {
+  graphicDesign: {
+    text: `We deliver eye-catching branding materials that are 
+    tailored to meet your business objectives.`
+  }
+}
+
 function App() {
   return (
       <BrowserRouter>
@@ -25,7 +32,7 @@ function App() {
             <Header />
               <Routes>
                 <Route exact path="/" element={<Home />} />
-                <Route exact path="/graphic-design" element={<GraphicDesignPage />} />
+                <Route exact path="/graphic-design" element={<GraphicDesignPage text={textContent.graphicDesign.text} />} />
               </Routes>
             <Banner />
             <Footer />
