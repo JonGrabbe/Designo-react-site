@@ -31,7 +31,8 @@ function getCardComponents(category) {
 
     for(let img in imagesData) {
         if(imagesData[img].category === category) {
-            arr.push(<PortfolioCard imgPath={img.imgPath} heading={img.title} text={img.text} />)
+            let obj = imagesData[img]
+            arr.push(<PortfolioCard imgPath={obj.imgPath} heading={obj.title} text={obj.text} />)
         }
     }
 
@@ -44,10 +45,12 @@ function PortfolioCardsContainer(props) {
     // console.log(arr.length)
     // setImages(arr)
     // console.log(images)
+    const images = getCardComponents('graphicDesign').map(item => item)
+    console.log(images)
     return (
         <div className="portfolio-cards-container">
             {
-                getCardComponents(props.category)
+                images
             }
         </div>
     );
