@@ -34,6 +34,7 @@
         }
         @include desktop() {
             display: initial;
+            height: 478px;
         }
         .img-container {
             // width: 100%;
@@ -80,6 +81,7 @@
             @include desktop() {
                 // display: initial;
                 width: 100%;
+                height: initial;
             }
             .heading {
                 font-size: 20px;
