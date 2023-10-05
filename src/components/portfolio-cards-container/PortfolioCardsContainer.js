@@ -4,7 +4,7 @@ import PortfolioCard from "../portfolio-card/PortfolioCard"
 let imgPathBase = '../../assets/'
 const imagesData = {
     timBrown: {
-        imgPath: `${imgPathBase}graphic-design/desktop/image-boxed-water.jpg`,
+        imgPath: `${imgPathBase}graphic-design/desktop/image-change.jpg`,
         category: 'graphicDesign',
         order: 1,
         title: 'TIM BROWN',
@@ -18,7 +18,7 @@ const imagesData = {
         text: 'A simple packaging concept made for Boxed Water'
     },
     science: {
-        imgPath: `${imgPathBase}graphic-design/desktop/image-boxed-water.jpg`,
+        imgPath: `${imgPathBase}graphic-design/desktop/image-science.jpg`,
         category: 'graphicDesign',
         order: 3,
         title: 'SCIENCE',
@@ -48,7 +48,7 @@ function PortfolioCardsContainer(props) {
     const images = getCardComponents('graphicDesign').map(item => item)
     console.log(images)
     return (
-        <div className="portfolio-cards-container">
+        <div className="portfolio-cards-container spacer-margin">
             {
                 images
             }
