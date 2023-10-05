@@ -10,15 +10,44 @@
 }
 
 .portfolio-cards-container {
+    margin-top: 98px;
     .portfolio-card-container {
+        // border-radius: 20px;
+        margin-top: 39px;
+        width: 320px;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: $pink-beige;
+        border-radius: 0 0 20px 20px;
         .img-container {
+            overflow: hidden;
             .img {
-
+                width: 100%;
+                border-radius: 20px 20px 0 0;
             }
         }
         .info-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: inherit;
+            height: 150px;
+            background-color: $pink-beige;
             .content-wrapper {
-                
+                text-align: center;
+                width: 82%;
+                .heading {
+                    font-size: 20px;
+                    color: $peach;
+                    line-height: 26px;
+                    letter-spacing: 5px;
+                }
+                .text {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0;
+                }
             }
         }
     }
