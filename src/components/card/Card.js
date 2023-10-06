@@ -36,7 +36,6 @@ export default function Card(props) {
         <Link to={props.href} >
             <div className={"card-container"+' '+props.className} style={{backgroundImage: `url(${process.env.PUBLIC_URL+'/'+img})`}}>
                 <div className="blur-container">
-                </div>
                 <div className="content-inner-wrapper">
                     <h3 className="h3 heading">
                         {props.text}
@@ -47,6 +46,7 @@ export default function Card(props) {
                         </span>
                         <img src={rightArrow} alt="" className="arrow-img" />
                     </div>
+                </div>
                 </div>
             </div>
         </Link>
