@@ -20,10 +20,52 @@ import { images } from "../../data/three-card-images/three-card-images";
 // }
 
 export default function TwoCard(props) {
+    let cardData = {
+        graphicDesign: {
+            firstElm: {
+                text: 'web design',
+                href: '/web-design'
+            },
+            secondElm: {
+                text: 'app design',
+                href: '/app-design'
+            }
+        },
+        webDesign: {
+            firstElm: {
+                text: 'app design',
+                href: '/app-design'
+            },
+            secondElm: {
+                text: 'graphic design',
+                href: '/graphic-design'
+            }
+        },
+        appDesign: {
+            firstElm: {
+                text: 'web design',
+                href: '/web-design'
+            },
+            secondElm: {
+                text: 'graphic design',
+                href: '/graphic-design'
+            }
+        }
+    }
+    // let firstElm;
+    // let secondElm;
+    // if(props.category === 'graphicDesign') {
+    //     firstElm = <Card text={cardData[props.category].firstElm.text} imgPath={images.webDesign} href="/web-design" />
+    //     secondElm= <Card text="app design" imgPath={images.appDesign} href="/app-design" />
+    // }
+    
+    let currentData = cardData[props.category]
+    console.log(currentData)
+
     return (
         <div className="two-card-container spacer-margin">
-            <Card text="web design" imgPath={images.webDesign} href="web-design" />
-            <Card text="graphic design" imgPath={images.graphicDesign} href="graphic-design" />
+            <Card text={currentData.firstElm.text} imgPath={images[props.category]} href="/web-design" />
+            <Card text="graphic design" imgPath={images.graphicDesign} href="/graphic-design" />
         </div>
     )
 }

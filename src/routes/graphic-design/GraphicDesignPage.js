@@ -8,7 +8,7 @@ export default function GraphicDesignPage(props) {
         <>
             <ServicesBanner text={props.text} heading="Graphic Design" />
             <PortfolioCardsContainer category="graphicDesign" />
-            <TwoCard />
+            <TwoCard category="graphicDesign" />
         </>
     )
 }
