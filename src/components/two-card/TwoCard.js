@@ -1,71 +1,55 @@
 import Card from "../card/Card";
 import { images } from "../../data/three-card-images/three-card-images";
-// const images = {
-//     webDesign: {
-//         mobile: '../../assets/home/mobile/image-web-design.jpg',
-//         tablet: '../../assets/home/tablet/image-web-design.jpg',
-//         desktop: '../../assets/home/desktop/image-web-design-large.jpg'
-//     },
-//     appDesign: {
-//         mobile: '../../assets/home/mobile/image-app-design.jpg',
-//         tablet: '../../assets/home/tablet/image-app-design.jpg',
-//         desktop: '../../assets/home/desktop/image-app-design.jpg'
-//     },
-//     graphicDesign: {
-//         mobile: '../../assets/home/mobile/image-graphic-design.jpg',
-//         tablet: '../../assets/home/tablet/image-graphic-design.jpg',
-//         desktop: '../../assets/home/desktop/image-graphic-design.jpg'
-//     }
-    
-// }
 
 export default function TwoCard(props) {
     let cardData = {
         graphicDesign: {
             firstElm: {
                 text: 'web design',
-                href: '/web-design'
+                href: '/web-design',
+                image: 'webDesign'
             },
             secondElm: {
                 text: 'app design',
-                href: '/app-design'
+                href: '/app-design',
+                image: 'appDesign'
             }
         },
         webDesign: {
             firstElm: {
                 text: 'app design',
-                href: '/app-design'
+                href: '/app-design',
+                image: 'appDesign'
             },
             secondElm: {
                 text: 'graphic design',
-                href: '/graphic-design'
+                href: '/graphic-design',
+                image: 'graphicDesign'
             }
         },
         appDesign: {
             firstElm: {
                 text: 'web design',
-                href: '/web-design'
+                href: '/web-design',
+                image: 'webDesign'
             },
             secondElm: {
                 text: 'graphic design',
-                href: '/graphic-design'
+                href: '/graphic-design',
+                image: 'graphicDesign'
             }
         }
     }
-    // let firstElm;
-    // let secondElm;
-    // if(props.category === 'graphicDesign') {
-    //     firstElm = <Card text={cardData[props.category].firstElm.text} imgPath={images.webDesign} href="/web-design" />
-    //     secondElm= <Card text="app design" imgPath={images.appDesign} href="/app-design" />
-    // }
     
     let currentData = cardData[props.category]
     console.log(currentData)
 
+    let secondImage = images[currentData.secondElm.image]
+
     return (
         <div className="two-card-container spacer-margin">
-            <Card text={currentData.firstElm.text} imgPath={images[props.category]} href="/web-design" />
-            <Card text="graphic design" imgPath={images.graphicDesign} href="/graphic-design" />
+            <Card text={currentData.firstElm.text} imgPath={images[props.category]} href={currentData.firstElm.href} />
+            <Card text={currentData.secondElm.text} imgPath={secondImage} href={currentData.secondElm.href} />
         </div>
     )
 }
