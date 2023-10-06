@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function MenuItem(props) {
     return (
         <li className="menu-item">
-            <Link to={props.href}>{props.text}</Link>
+            <Link onClick={props.handleClick} to={props.href}>{props.text}</Link>
         </li>
     )
 }
@@ -15,9 +15,9 @@ function MenuItem(props) {
 function Menu(props) {
     return (
         <>
-            <MenuItem text="Our company" href="/about" />
-            <MenuItem text="Our Locations" href='/locations' />
-            <MenuItem text="Our Contact" href='/contact' />
+            <MenuItem text="Our company" href="/about" handleClick={props.handleClick} />
+            <MenuItem text="Our Locations" href='/locations' handleClick={props.handleClick} />
+            <MenuItem text="Our Contact" href='/contact' handleClick={props.handleClick} />
         </>
     )
 }
@@ -31,16 +31,20 @@ export default function Header(props) {
         setIsMenuOpen(!isMenuOpen)
     }
 
+    function closeMenu() {
+        setIsMenuOpen(false)
+    }
+
     return (
         <>
             <header className="header spacer-margin">
-                <Link to='/'><img src={logo} className="logo" alt="" /></Link>
+                <Link onClick={closeMenu} to='/'><img src={logo} className="logo" alt="" /></Link>
                 <button onClick={menuClick} className='menu-button'>
                     <img src={isMenuOpen ? closeMenuIcon : hamburgerMenuIcon} alt="" />
                 </button>
                 <nav className="header-nav-menu-container nav-ul-menu">
                     <ul>
-                        <Menu />
+                        <Menu handleClick={menuClick} />
                     </ul>
                 </nav>
             </header>
@@ -51,9 +55,10 @@ export default function Header(props) {
                         {/* <MenuItem text="Our company" href="/about" />
                         <MenuItem text="Our Locations" />
                         <MenuItem text="Our Contact" /> */}
-                        <Menu />
+                        <Menu handleClick={menuClick} />
                     </ul>
                 </nav>
+                <div className="dark-background-cover" onClick={menuClick}></div>
             </div>
         </>
     )
