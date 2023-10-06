@@ -7,6 +7,8 @@ import BorderlessCardsContainer from './components/borderless-cards-container/Bo
 import Footer from './components/footer/Footer';
 import Banner from './components/banner/Banner';
 import GraphicDesignPage from './routes/graphic-design/GraphicDesignPage';
+import WebDesignPage from './routes/web-design/WebDesignPage';
+import AppDesingPage from './routes/app-design/AppDesignPage';
 
 function Home() {
   return (
@@ -33,6 +35,8 @@ function App() {
               <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/graphic-design" element={<GraphicDesignPage text={textContent.graphicDesign.text} />} />
+                <Route exact path="/web-design" element={<WebDesignPage />} />
+                <Route exact path="/app-design" element={<AppDesingPage />} />
               </Routes>
             <Banner />
             <Footer />

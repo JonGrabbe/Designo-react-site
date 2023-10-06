@@ -33,7 +33,7 @@ export default function Card(props) {
 
     window.addEventListener('resize', update)
     return (
-        <Link to="/graphic-design">
+        <Link to={props.href} >
             <div className={"card-container"+' '+props.className} style={{backgroundImage: `url(${process.env.PUBLIC_URL+'/'+img})`}}>
                 <div className="blur-container">
                 </div>

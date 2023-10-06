@@ -22,9 +22,9 @@ const images = {
 export default function ThreeCard(props) {
     return (
         <div className="three-card-container spacer-margin">
-            <Card text="web design" className="tall" imgPath={images.webDesign} />
-            <Card text="app design" imgPath={images.appDesign} />
-            <Card text="graphic design" imgPath={images.graphicDesign} />
+            <Card text="web design" className="tall" imgPath={images.webDesign} href="web-design" />
+            <Card text="app design" imgPath={images.appDesign} href="app-design" />
+            <Card text="graphic design" imgPath={images.graphicDesign} href="graphic-design" />
         </div>
     )
 }
