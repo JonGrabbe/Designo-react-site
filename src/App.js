@@ -9,6 +9,7 @@ import Banner from './components/banner/Banner';
 import GraphicDesignPage from './routes/graphic-design/GraphicDesignPage';
 import WebDesignPage from './routes/web-design/WebDesignPage';
 import AppDesingPage from './routes/app-design/AppDesignPage';
+import AboutPage from './routes/about/AboutPage';
 
 function Home() {
   return (
@@ -60,6 +61,7 @@ function Container() {
                 <Route exact path="/graphic-design" element={<GraphicDesignPage text={textContent.graphicDesign.text} />} />
                 <Route exact path="/web-design" element={<WebDesignPage />} />
                 <Route exact path="/app-design" element={<AppDesingPage />} />
+                <Route exact path="/about" element={<AboutPage />} />
               </Routes>
             <Banner />
             <Footer />
