@@ -23,6 +23,9 @@
      &:hover {
         // background-color: $peach;
      }
+     &.tall {
+        grid-area: tall;
+     }
      .blur-container {
         &:hover {
             background-color: $peach;

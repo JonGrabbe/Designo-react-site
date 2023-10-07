@@ -9,6 +9,9 @@
         .card-container {
             height: 100%;
         }
+        .small {
+            grid-area: small;
+        }
         .tall {
             grid-area: tall;
         }
