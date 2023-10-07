@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useMatch } from 'react-router-dom';
 import './scss/main.scss';
 import Header from './components/header/Header';
 import HomeBanner from './components/home-banner/HomeBanner';
@@ -27,10 +27,33 @@ let textContent = {
   }
 }
 
-function App() {
+function Container() {
+  let homeMatch = useMatch('/')
+  let webDesignMatch = useMatch('/web-design')
+  let appDesignMatch = useMatch('/app-design');
+  let graphicDesignMatch = useMatch('/graphic-design');
+  // console.log(homeMatch)
+
+  let leafClassName = '';
+  
+  if(homeMatch) {
+    leafClassName = 'two-leaf rotate-leaf'
+  }
+  if(webDesignMatch) {
+    leafClassName = 'one-leaf'
+  }
+  if(appDesignMatch) {
+    leafClassName = 'one-leaf'
+  }
+  if(graphicDesignMatch) {
+    leafClassName = 'one-leaf'
+  }
+
+  let globalClassName = `App global-font${leafClassName ? ' '+leafClassName : ''}`
+
   return (
-      <BrowserRouter>
-        <div className="App global-font">
+    <>
+        <div className={globalClassName}>
             <Header />
               <Routes>
                 <Route exact path="/" element={<Home />} />
@@ -41,6 +64,15 @@ function App() {
             <Banner />
             <Footer />
         </div>
+    
+    </>
+  )
+}
+
+function App() {
+  return (
+      <BrowserRouter>
+        <Container />
       </BrowserRouter>
   );
 }

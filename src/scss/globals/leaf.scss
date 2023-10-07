@@ -1,0 +1,48 @@
+.one-leaf {
+    @mixin desktop {
+        @media (min-width: 1440px) {
+            @content;
+        }
+    }
+    @include desktop {
+        background-image: 
+            url("/assets/shared/desktop/bg-pattern-leaf.svg");
+    
+        background-position: left top 250px;
+        background-repeat: no-repeat;
+    }
+
+}
+.two-leaf {
+    @mixin desktop {
+        @media (min-width: 1470px) {
+            @content;
+        }
+     }
+    @include desktop {
+        background-image: 
+            url("/assets/shared/desktop/bg-pattern-leaf.svg");
+    
+        background-position: left top 560px;
+        background-repeat: no-repeat;
+    }
+}
+.rotate-leaf::before {
+    @mixin desktop {
+        @media (min-width: 1470px) {
+            @content;
+        }
+     }
+    @include desktop {
+        content: '';
+        position: absolute;
+        top: 2000px;
+        left: 50%;
+        z-index: -9999;
+        width: 1006px;
+        height: 594px;
+        background-image: url("/assets/shared/desktop/bg-pattern-leaf.svg");
+        transform: rotate(180deg)
+        // background-position: right bottom;
+    }
+}

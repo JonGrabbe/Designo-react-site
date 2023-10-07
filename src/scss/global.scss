@@ -41,6 +41,10 @@ h3 {
 body {
     position: relative;
 }
+.App {
+    position: relative;
+    overflow: hidden;
+}
 .spacer {
     // padding: 0 24px;
     // padding-left: 24px;
@@ -76,3 +80,4 @@ body {
         margin-right: 164px;
     }
 }
+@import './globals/leaf.scss';
