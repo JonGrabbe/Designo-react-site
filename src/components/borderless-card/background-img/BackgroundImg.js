@@ -53,12 +53,19 @@ export default function BackgroundImg(props) {
         }
     }, [props.imgType])
 
-    
+    let styles = {};
+    // if(!(imgData[props.imgType]) || imgData[props.imgType].rotateDegree === 0) {
+        
+    // }
+    let imgObj = imgData[props.imgType];
+    if(imgObj) {
+        styles = {rotate: imgData[props.imgType].rotateDegree+'deg'}
+    }
 
     return (
         <div className="borderless-card-background-img">
             <img src={img} alt="" className='main' />
-            <img src={circleImg} alt="" className={'circle'} style={{rotate: imgData[props.imgType].rotateDegree+'deg'}} />
+            <img src={circleImg} alt="" className={'circle'} style={styles} />
         </div>
     )
 }
