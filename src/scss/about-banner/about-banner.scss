@@ -4,6 +4,11 @@
             @content;
         }
     }
+    @mixin mobile-only {
+        @media (max-width: 689px) {
+            @content;
+        }
+    }
     @mixin desktop {
         @media (min-width: 1111px) {
             @content;
@@ -12,8 +17,12 @@
     background-image: url('/assets/about/mobile/bg-pattern-hero-about-mobile.svg');
     background-position: left -481px top 210px;
     background-repeat: no-repeat;
-    border-radius: 20px;
+    @include mobile-only {
+        margin-left: 0;
+        margin-right: 0;
+    }
     @include tablet {
+        border-radius: 20px;
         background-image: url('/assets/about/desktop/bg-pattern-hero-about-desktop.svg');
         background-position: left -152px top -108px;
     }
@@ -22,15 +31,15 @@
         background-position: left -63px top -150px;
     }
     .img-container {
-        border-radius: 20px 20px 0 0;
         background-image: 
-            url('/assets/about/mobile/image-about-hero.jpg');
+        url('/assets/about/mobile/image-about-hero.jpg');
         background-size: cover;
         width: 100%;
         height: 320px;
         background-repeat: no-repeat;
         // background-position: cover;
         @include tablet {
+            border-radius: 20px 20px 0 0;
             background-image: url('/assets/about/tablet/image-about-hero.jpg');
         }
         @include desktop {
@@ -86,6 +95,47 @@
             @include tablet {
                 font-size: 16px;
                 line-height: 26px;
+            }
+        }
+    }
+    // world class talent
+    &.about-banner-world-class {
+        background-color: $pink-beige;
+        @include tablet {
+            margin-top: 122px;
+        }
+        .img-container {
+            background-image: url('/assets/about/mobile/image-world-class-talent.jpg');
+            background-repeat: no-repeat;
+            @include tablet {
+                border-radius: 20px 20px 0 0;
+                background-image: url('/assets/about/tablet/image-world-class-talent.jpg');
+            }
+            @include desktop {
+                background-image: url('/assets/about/desktop/image-world-class-talent.jpg');
+                order: 2;
+                height: 480px;
+                width: 476px;
+                border-radius: 0 20px 20px 0;
+            }
+        }
+        .text-container {
+            background-image: url('/assets/shared/desktop/bg-pattern-three-circles.svg');
+            background-position: left 70px top -190px;
+            background-repeat: no-repeat;
+            @include mobile-only {
+                max-width: initial;
+            }
+            .inner-wrapper {
+                max-width: 83%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .heading {
+                color: $peach;
+            }
+            .text {
+                color: $black;
             }
         }
     }
