@@ -15,11 +15,11 @@
     }
  }
  // home banner using this
- @mixin desktop {
+@mixin desktop {
     @media (min-width: 1128px) {
         @content;
     }
- }
+}
  @mixin desktop-global {
     @media (min-width: 1128px) {
         @content;
