@@ -104,32 +104,49 @@
         @include tablet {
             margin-top: 122px;
         }
+        @include desktop {
+            height: 640px;
+        }
         .img-container {
+            order: initial;
             background-image: url('/assets/about/mobile/image-world-class-talent.jpg');
             background-repeat: no-repeat;
+            // border-radius: initial; 
             @include tablet {
                 border-radius: 20px 20px 0 0;
                 background-image: url('/assets/about/tablet/image-world-class-talent.jpg');
             }
             @include desktop {
                 background-image: url('/assets/about/desktop/image-world-class-talent.jpg');
-                order: 2;
-                height: 480px;
+                // order: 2;
+                height: 100%;
                 width: 476px;
-                border-radius: 0 20px 20px 0;
+                // border-radius: 0 20px 20px 0;
+                border-radius: 0;
             }
         }
         .text-container {
             background-image: url('/assets/shared/desktop/bg-pattern-three-circles.svg');
             background-position: left 70px top -190px;
             background-repeat: no-repeat;
+            order: initial;
             @include mobile-only {
                 max-width: initial;
+            }
+            @include desktop() {
+                display: flex;
+                justify-content: center;
+                background-position: left -100px bottom;
+                margin-left: 0;
+                margin-right: 0;
             }
             .inner-wrapper {
                 max-width: 83%;
                 margin-right: auto;
                 margin-left: auto;
+                @include desktop {
+                    margin-left: ;
+                }
             }
             .heading {
                 color: $peach;
