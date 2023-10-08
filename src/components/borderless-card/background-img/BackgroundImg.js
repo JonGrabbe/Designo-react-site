@@ -4,6 +4,9 @@ import passionateImg from '../../../assets/home/desktop/illustration-passionate.
 import friendly from '../../../assets/home/desktop/illustration-friendly.svg'
 import resourceful from '../../../assets/home/desktop/illustration-resourceful.svg';
 import circleImg from '../../../assets/home/desktop/bg-pattern-hero-home.svg';
+import canada from '../../../assets/shared/desktop/illustration-canada.svg'
+import australia from '../../../assets/shared/desktop/illustration-australia.svg'
+import uk from '../../../assets/shared/desktop/illustration-united-kingdom.svg'
 
 const imgData = {
     'friendly': {
@@ -36,7 +39,21 @@ export default function BackgroundImg(props) {
             setImg(resourceful)
             return
         }
+        if(imgType === 'canada') {
+            setImg(canada)
+            return
+        }
+        if(imgType === 'australia') {
+            setImg(australia)
+            return
+        }
+        if(imgType === 'uk') {
+            setImg(uk)
+            return
+        }
     }, [props.imgType])
+
+    
 
     return (
         <div className="borderless-card-background-img">
