@@ -41,6 +41,9 @@ h3 {
 body {
     position: relative;
 }
+button:hover {
+    cursor: pointer;
+}
 .App {
     position: relative;
     overflow: hidden;

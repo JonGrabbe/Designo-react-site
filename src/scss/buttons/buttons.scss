@@ -2,9 +2,11 @@
     $height: 56px;
     $line-height: $global-line-height;
     $color: $black;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
-    padding-top: calc(($height - $line-height) / 2);
+    // padding-top: calc(($height - $line-height) / 2);
     border-radius: 8px;
     width: 152px;
     height: $height;
@@ -24,5 +26,13 @@
     &:hover {
         color: $white;
         background-color: $light-peach;
+    }
+}
+.button--on-light {
+    @extend .button;
+    color: $white;
+    background-color: $peach;
+    &:hover {
+        background-color: $white;
     }
 }
