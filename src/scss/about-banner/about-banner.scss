@@ -98,6 +98,33 @@
             }
         }
     }
+    &.main-body-banner {
+        background-color: $pink-beige;
+        .img-container {
+            background-repeat: no-repeat;
+        }
+        .text-container {
+            background-image: url('/assets/shared/desktop/bg-pattern-three-circles.svg');
+            // background-position: left 70px top -190px;
+            background-position: left top;
+            background-repeat: no-repeat;
+            @include mobile-only {
+                max-width: initial;
+            }
+            .inner-wrapper {
+                max-width: 83%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .heading {
+                color: $peach;
+            }
+            .text {
+                color: $black;
+            }
+
+        }
+    }
     // world class talent
     &.about-banner-world-class {
         background-color: $pink-beige;
@@ -139,5 +166,28 @@
                 color: $black;
             }
         }
+    }
+    &.about-banner-right-image {
+        margin-top: 120px;
+        .img-container {
+            order: 2;
+            background-image: url('/assets/about/mobile/image-real-deal.jpg');
+            @include tablet {
+                border-radius: 20px 20px 0 0;
+                background-image: url('/assets/about/tablet/image-real-deal.jpg');
+            }
+            @include desktop {
+                background-image: url('/assets/about/desktop/image-real-deal.jpg');
+                order: 2;
+                height: 480px;
+                width: 476px;
+                border-radius: 0 20px 20px 0;
+            }
+            
+        }
+        .text-container {
+            order: 1;
+        }
+        
     }
 }
