@@ -1,7 +1,7 @@
 function LocationContainer(props) {
 
     return (
-        <div className={`location-container ${props.className ? props.className : ''}`}>
+        <div className={`location-container ${props.className ? props.className : ''}`} >
             {/* c is short for container */}
             <div className="img-c">
 
