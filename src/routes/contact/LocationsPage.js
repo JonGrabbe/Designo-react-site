@@ -1,3 +1,5 @@
+import LocationContainer from "../../components/location-container/LocationContainer";
+
 function LocationsPage(props) {
     const data = [
         {
@@ -8,8 +10,7 @@ function LocationsPage(props) {
             },
             contact: {
                 items: ['P : (02) 6720 9092', 'M : contact@designo.au']
-            }
-        },
+            }        },
         {
             country: 'Australia',
             location: {
@@ -24,7 +25,30 @@ function LocationsPage(props) {
 
     return ( 
         <>
-            <h1>dasfsdafasdf</h1>
+            <LocationContainer heading="Canada" className="canada">
+                <div className="info-item-c">
+                    <p className="name">
+                        Designo Central Office
+                    </p>
+                    <p className="address-line">
+                        3886 Wellington Street
+                    </p>
+                    <p className="address-line">
+                        Toronto, Ontario M9C 3J5
+                    </p>
+                </div>
+                <div className="info-item-c">
+                    <p className="name">
+                        Contact
+                    </p>
+                    <p className="address-line">
+                        P : +1 253-863-8967
+                    </p>
+                    <p className="address-line">
+                        M : contact@designo.co
+                    </p>
+                </div>
+            </LocationContainer>
         </>    
     );
 }

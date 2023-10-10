@@ -1,7 +1,7 @@
 function LocationContainer(props) {
 
     return (
-        <div className="location-container">
+        <div className={`location-container ${props.className ? props.className : ''}`}>
             {/* c is short for container */}
             <div className="img-c">
 
@@ -9,22 +9,7 @@ function LocationContainer(props) {
             <div className="text-c">
                 <div className="inner-c">
                     <h2 className="heading h2">{props.heading}</h2>
-                    <div className="info-item">
-                        <p className="name">
-                            {props.location.name}
-                        </p>
-                        <p className="address">
-                            {props.location.address}
-                        </p>
-                    </div>
-                    <div className="info-item">
-                        <p className="name">
-                            {props.location.name}
-                        </p>
-                        <p className="address">
-                            {/* {props.} */}
-                        </p>
-                    </div>
+                    {props.children}
                 </div>
             </div>
         </div>
