@@ -1,4 +1,9 @@
 .contact-container {
+    @mixin tablet {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
     box-sizing: border-box;
     // height: 764px;
     padding-top: 80px;
@@ -10,14 +15,28 @@
     // background-size: 700px;
     background-repeat: no-repeat;
     background-position: left -100px top;
+    @include tablet {
+        padding-right: 58px;
+        padding-left: 58px;
+        padding-bottom: 71px;
+        background-image: url('/assets/contact/desktop/bg-pattern-hero-desktop.svg');
+        background-position: left -100px top -60px;
+    }
     .inner-c {
         .text-c {
             text-align: center;
+            @include tablet {
+                text-align: left;
+            }
             .heading {
                 font-size: 32px;
                 line-height: 36px;
                 color: $white;
                 font-weight: normal;
+                @include tablet {
+                    font-size: 48px;
+                    line-height: 48px;
+                }
             }
             .text {
                 font-size: 15px;
@@ -33,10 +52,12 @@
             // align-items: center;
             margin-top: 60px;
             .form-item-c {
+                position: relative;
                 margin-top: 10px;
                 input {
+                    position: relative;
                     height: 50px;
-                    display: block;
+                    // display: block;
                     width: 70%;
                     background: transparent;
                     border: none;
@@ -55,6 +76,7 @@
                 }
                 &.message {
                     textarea {
+                        position: relative;
                         resize: none;
                         height: 126px;
                         box-sizing: border-box;
@@ -72,12 +94,33 @@
                         }
                     }
                 }
+                .error-message {
+                    font-size: 15px;
+                    color: $white;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    display: -moz-box;
+                    display: flex;
+                    -moz-box-align: center;
+                    align-items: center;
+                    font-style: italic;
+                    // line-height: 2.;
+                }
             }
             .form-button {
                 display: block;
                 margin-top: 36px;
                 margin-right: auto;
                 margin-left: auto;
+                @include tablet {
+                    margin-top: 24px;
+                    margin-right: 0;
+                    // margin-left: 0;
+                }
             }
         }
     }
