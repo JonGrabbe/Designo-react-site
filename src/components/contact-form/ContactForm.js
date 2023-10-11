@@ -32,8 +32,6 @@ function ContactForm(props) {
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
 
-
-
     return (
         <div className="contact-container banner">
             <div className="inner-c">

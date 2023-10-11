@@ -83,4 +83,13 @@ button:hover {
         margin-right: 164px;
     }
 }
+
+.wrapper {
+    @include tablet-wrapper {
+        max-width: 689px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
 @import './globals/leaf.scss';

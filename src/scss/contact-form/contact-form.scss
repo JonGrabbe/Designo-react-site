@@ -4,6 +4,11 @@
             @content;
         }
     }
+    @mixin desktop {
+        @media (min-width: 1111px) {
+            @content;
+        }
+    }
     box-sizing: border-box;
     // height: 764px;
     padding-top: 80px;
@@ -16,6 +21,7 @@
     background-repeat: no-repeat;
     background-position: left -100px top;
     @include tablet {
+        border-radius: 20px;
         padding-right: 58px;
         padding-left: 58px;
         padding-bottom: 71px;
