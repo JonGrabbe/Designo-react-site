@@ -1,0 +1,72 @@
+.contact-container {
+    height: 764px;
+    padding-top: 80px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+    background-image: url('/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg');
+    // background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: left -100px top;
+    .inner-c {
+        .text-c {
+            text-align: center;
+            .heading {
+                font-size: 32px;
+                line-height: 36px;
+                color: $white;
+                font-weight: normal;
+            }
+            .text {
+                font-size: 15px;
+                line-height: 25px;
+                letter-spacing: 0;
+                margin-top: 42px;
+            }
+        }
+        .form-c {
+            .form-item-c {
+                margin-top: 10px;
+                input {
+                    height: 50px;
+                    display: block;
+                    width: 70%;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    font-weight: 500;
+                    font-size: 15px;
+                    position: relative;
+                    color: $white;
+                    width: 100%;
+                    border-bottom: 1px solid $white;
+                    // padding: 0 1.7rem;
+                    &::placeholder {
+                        color: $white;
+                        opacity: .5;
+                    }
+                }
+                &.message {
+                    textarea {
+                        resize: none;
+                        height: 126px;
+                        box-sizing: border-box;
+                        background: transparent;
+                        border: none;
+                        border-bottom: 1px solid $white;
+                        // padding: 0 1.7rem;
+                        font-size: 15px;
+                        padding-top: 15px;
+                        color: $white;
+                        width: 100%;
+                        &::placeholder {
+                            color: $white;
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

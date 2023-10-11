@@ -10,7 +10,8 @@ import GraphicDesignPage from './routes/graphic-design/GraphicDesignPage';
 import WebDesignPage from './routes/web-design/WebDesignPage';
 import AppDesingPage from './routes/app-design/AppDesignPage';
 import AboutPage from './routes/about/AboutPage';
-import LocationsPage from './routes/contact/LocationsPage';
+import LocationsPage from './routes/location/LocationsPage';
+import ContactPage from './routes/contact/ContactPage';
 
 function Home() {
   return (
@@ -64,6 +65,7 @@ function Container() {
                 <Route exact path="/app-design" element={<AppDesingPage />} />
                 <Route exact path="/about" element={<AboutPage />} />
                 <Route exact path="/locations" element={<LocationsPage />} />
+                <Route exact path="/contact" element={<ContactPage />} />
               </Routes>
             <Banner />
             <Footer />
