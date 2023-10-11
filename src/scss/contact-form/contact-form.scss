@@ -1,5 +1,6 @@
 .contact-container {
-    height: 764px;
+    box-sizing: border-box;
+    // height: 764px;
     padding-top: 80px;
     padding-left: 28px;
     padding-right: 28px;
@@ -26,6 +27,11 @@
             }
         }
         .form-c {
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            margin-top: 60px;
             .form-item-c {
                 margin-top: 10px;
                 input {
@@ -66,6 +72,12 @@
                         }
                     }
                 }
+            }
+            .form-button {
+                display: block;
+                margin-top: 36px;
+                margin-right: auto;
+                margin-left: auto;
             }
         }
     }

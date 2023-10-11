@@ -16,7 +16,7 @@ function ContactForm(props) {
                     <div className="form-item-c message">
                         <textarea name="message" placeholder="your message"></textarea>
                     </div>
-                    <button type="submit">SUBMIT</button>
+                    <button type="submit" className="form-button button button--on-dark">SUBMIT</button>
                 </form>
             </div>
         </div>
