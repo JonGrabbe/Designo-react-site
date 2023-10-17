@@ -66,6 +66,8 @@ button:hover {
     }
 }
 // used for same fucntionality as a .wrapper
+$spacer-margin-tablet: 39px;
+$spacer-margin-desktop: 164px;
 .spacer-margin {
     @mixin desktop {
         @media (min-width: 1430px) {

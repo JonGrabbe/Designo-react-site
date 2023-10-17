@@ -4,9 +4,7 @@ import Wrapper from "../../components/wrapper/wrapper";
 function ContactPage(props) {
     return (
         <>
-            <Wrapper>
-                <ContactForm />
-            </Wrapper>
+            <ContactForm />
         </>
     );
 }

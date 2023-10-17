@@ -5,7 +5,7 @@
         }
     }
     @mixin desktop {
-        @media (min-width: 1111px) {
+        @media (min-width: 1440px) {
             @content;
         }
     }
@@ -27,12 +27,30 @@
         padding-bottom: 71px;
         background-image: url('/assets/contact/desktop/bg-pattern-hero-desktop.svg');
         background-position: left -100px top -60px;
+        margin-left: $spacer-margin-tablet;
+        margin-right: $spacer-margin-tablet;
+    }
+    @include desktop() {
+        margin-left: $spacer-margin-desktop;
+        margin-right: $spacer-margin-desktop;
+        padding-right: 98;
+        padding-left: 98px;
+        padding-bottom: 55PX;
+        padding-top: 0;
     }
     .inner-c {
+        @include desktop {
+            display: flex;
+            align-items: center;
+        }
         .text-c {
             text-align: center;
             @include tablet {
                 text-align: left;
+            }
+            @include desktop {
+                max-width: 450px;
+                margin-right: 93px;
             }
             .heading {
                 font-size: 32px;
@@ -57,6 +75,9 @@
             // justify-content: center;
             // align-items: center;
             margin-top: 60px;
+            @include desktop {
+                width: 50%;
+            }
             .form-item-c {
                 position: relative;
                 margin-top: 10px;
