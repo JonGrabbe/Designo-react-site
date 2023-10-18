@@ -24,14 +24,21 @@
     background-repeat: no-repeat;
     background-position: right top 20px;
     text-align: center;
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 0;
     @include tablet {
         height: 252px;
         background-image: url('/assets/app-design/desktop/bg-pattern-intro-app.svg');
         background-position: center;
-
+        margin-right: $spacer-margin-tablet;
+        margin-left: $spacer-margin-tablet;
+        border-radius: 20px;
     }
     @include desktop {
         background-position: center left;
+        margin-right: $spacer-margin-desktop;
+        margin-left: $spacer-margin-desktop;
     }
     .heading {
         font-size: 32px;
