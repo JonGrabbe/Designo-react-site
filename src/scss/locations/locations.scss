@@ -13,7 +13,7 @@
             @content;
         }
     }
-    width: 375px;
+    width: 320px;
     margin-left: auto;
     margin-right: auto;
     &.left {
@@ -92,8 +92,8 @@
         background-color: $pink-beige;
         background-image: url('/assets/shared/desktop/bg-pattern-three-circles.svg');
         background-repeat: no-repeat;
-        border-radius: 20px;
         @include tablet {
+            border-radius: 20px;
             margin-top: 31px;
             background-position: left top -280px;
             background-size: 90%;
