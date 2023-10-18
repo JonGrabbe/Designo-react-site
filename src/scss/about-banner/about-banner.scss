@@ -140,10 +140,10 @@
             }
             @include desktop {
                 background-image: url('/assets/about/desktop/image-world-class-talent.jpg');
-                order: 2;
+                order: 1;
                 height: 480px;
                 width: 476px;
-                border-radius: 0 20px 20px 0;
+                border-radius: 20px 0 0 20px;
             }
         }
         .text-container {
