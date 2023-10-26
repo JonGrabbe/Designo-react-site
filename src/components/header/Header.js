@@ -43,7 +43,7 @@ export default function Header(props) {
                 <Link onClick={closeMenu} to='/'><img src={logo} className="logo" alt="" /></Link>
                 <button onClick={menuClick} className='menu-button'>
                     {/* <img src={isMenuOpen ? closeMenuIcon : hamburgerMenuIcon} alt="" /> */}
-                    <MenuIconAnimation />
+                    <MenuIconAnimation isMenuOpen={isMenuOpen} />
                 </button>
                 <nav className="header-nav-menu-container nav-ul-menu">
                     <ul>
