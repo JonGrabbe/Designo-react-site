@@ -8,6 +8,7 @@ function MenuItem(props) {
     return (
         <li className="menu-item">
             <Link onClick={props.handleClick} to={props.href}>{props.text}</Link>
+            <span className="hover-animation"></span>
         </li>
     )
 }
