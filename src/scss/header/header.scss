@@ -2,70 +2,46 @@
 
 $header-height: 105px;
 .header {
-    .hamburger .line{
-        width: 50px;
-        height: 5px;
-        background-color: #ecf0f1;
-        display: block;
-        margin: 8px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-      }
-      
-      .hamburger:hover{
-        cursor: pointer;
-      }
+    .menu-icon-animation {
+        position: relative;
+        top: -4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 20px;
+        // overflow: hidden;
+        .line {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $black;
+            position: relative;
+            transition-property: rotate, margin;
+            transition-duration: .4s;
+            transform-origin: left;
+        }
+        .line-1 {
 
-      #hamburger-5.is-active{
-        -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        transform: rotate(90deg);
-      }
-      
-      #hamburger-5.is-active .line:nth-child(2){
-        -webkit-transition: none;
-        -o-transition: none;
-        transition: none;
-      }
-      
-      #hamburger-5 .line:nth-child(2){
-        -webkit-transition-delay: 0.3s;
-        -o-transition-delay: 0.3s;
-        transition-delay: 0.3s;
-      }
-      
-      
-      #hamburger-5.is-active .line:nth-child(2){
-        opacity: 0;
-      }
-      
-      #hamburger-5.is-active .line:nth-child(1),
-      #hamburger-5.is-active .line:nth-child(3){
-        width: 35px;
-        -webkit-transform-origin: right;
-        -moz-transform-origin: right;
-        -ms-transform-origin: right;
-        -o-transform-origin: right;
-        transform-origin: right;
-      }
-      
-      #hamburger-5.is-active .line:nth-child(1){
-        -webkit-transform: translateY(15px) rotate(45deg);
-        -ms-transform: translateY(15px) rotate(45deg);
-        -o-transform: translateY(15px) rotate(45deg);
-        transform: translateY(15px) rotate(45deg);
-      }
-      
-      #hamburger-5.is-active .line:nth-child(3){
-        -webkit-transform: translateY(-15px) rotate(-45deg);
-        -ms-transform: translateY(-15px) rotate(-45deg);
-        -o-transform: translateY(-15px) rotate(-45deg);
-        transform: translateY(-15px) rotate(-45deg);
-      }
-
-
+        }
+        &.is-active {
+            .line-1 {
+                rotate: 45deg;
+                // top: 3px;
+            }
+            .line-2 {
+                // left: 25px;
+                margin-left: 25px;
+                opacity: 0;
+            }
+            .line-3 {
+                rotate: -45deg;
+                // top: -3px;
+            }
+        }
+        
+    }
     @mixin tablet {
         @media (min-width: 770px) {
             @content;

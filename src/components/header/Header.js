@@ -3,17 +3,7 @@ import logo from "../../assets/shared/desktop/logo-dark.png"
 import hamburgerMenuIcon from "../../assets/shared/mobile/icon-hamburger.svg";
 import closeMenuIcon from "../../assets/shared/mobile/icon-close.svg";
 import { Link } from 'react-router-dom';
-import MenuButtonAnimation from './MenuButtonAnimation';
-
-
-// $(document).ready(function(){
-//     $(".hamburger").click(function(){
-//       $(this).toggleClass("is-active");
-//     });
-//   });
-
-// document.getElementById('hamburger-5').classList.toggle('is-active')
-  
+import MenuIconAnimation from '../../scss/header/MenuIconAnimation';
 
 function MenuItem(props) {
     return (
@@ -53,7 +43,7 @@ export default function Header(props) {
                 <Link onClick={closeMenu} to='/'><img src={logo} className="logo" alt="" /></Link>
                 <button onClick={menuClick} className='menu-button'>
                     {/* <img src={isMenuOpen ? closeMenuIcon : hamburgerMenuIcon} alt="" /> */}
-                    <MenuButtonAnimation />
+                    <MenuIconAnimation />
                 </button>
                 <nav className="header-nav-menu-container nav-ul-menu">
                     <ul>
