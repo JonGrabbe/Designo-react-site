@@ -1,7 +1,5 @@
 import {useState} from 'react';
 import logo from "../../assets/shared/desktop/logo-dark.png"
-import hamburgerMenuIcon from "../../assets/shared/mobile/icon-hamburger.svg";
-import closeMenuIcon from "../../assets/shared/mobile/icon-close.svg";
 import { Link } from 'react-router-dom';
 import MenuIconAnimation from '../../scss/header/MenuIconAnimation';
 
