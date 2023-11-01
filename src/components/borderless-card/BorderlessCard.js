@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import BackgroundImg from './background-img/BackgroundImg';
 
 export default function BorderlessCard(props) {
